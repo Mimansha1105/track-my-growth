@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 // ✅ Enable CORS for frontend URL — DO THIS BEFORE ROUTES
 app.use(cors({
-  origin: 'https://track-my-growth-frontend.vercel.app',
+  origin: process.env.FRONTEND_URL || false,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
